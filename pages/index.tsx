@@ -46,6 +46,10 @@ export default function Home() {
       <Link href="/linkpage">
         <a>Go to Link Page</a>
       </Link>
+      <br />
+      <Link href="/linkpage/nestedlinkpage">
+        <a>Go to nested Page</a>
+      </Link>
       <h1>{message}</h1>
       <h1>Secret: {secret}</h1>
       <form>
