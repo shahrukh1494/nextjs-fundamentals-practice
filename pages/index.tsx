@@ -1,16 +1,7 @@
-//Styled JSX
-
 function Heading(props) {
   return (
     <div>
-      <h1>{props.heading}</h1>
-      <style jsx global>
-        {`
-          h1 {
-            color: red;
-          }
-        `}
-      </style>
+      <h1 className="red">{props.heading}</h1>
     </div>
   );
 }
