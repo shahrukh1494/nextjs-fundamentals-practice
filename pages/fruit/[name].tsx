@@ -13,12 +13,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [{ params: { name: "hello" } }, { params: { name: "world" } }],
-    fallback: false,
+    fallback: true,
   };
 };
 
 export default function MyFruit(props) {
   const router = useRouter();
+
+  if (router.isFallback) {
+    return <h1>Loading...</h1>;
+  }
 
   return <h1>Hello {props.myFavNum}</h1>;
 }
