@@ -1,5 +1,6 @@
 import { useState } from "react";
 import jwt from "jsonwebtoken";
+import Link from "next/link";
 
 export default function Home() {
   const [username, setUsername] = useState<string>("");
@@ -42,6 +43,9 @@ export default function Home() {
 
   return (
     <div>
+      <Link href="/linkpage">
+        <a>Go to Link Page</a>
+      </Link>
       <h1>{message}</h1>
       <h1>Secret: {secret}</h1>
       <form>
