@@ -1,7 +1,9 @@
+import styles from "./index.module.css";
+
 function Heading(props) {
   return (
     <div>
-      <h1 className="red">{props.heading}</h1>
+      <h1 className={styles.red}>{props.heading}</h1>
     </div>
   );
 }
