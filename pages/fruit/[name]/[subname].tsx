@@ -1,4 +1,3 @@
-import { fchmod } from "fs/promises";
 import { useRouter } from "next/router";
 
 export default function FruitName() {
