@@ -7,7 +7,7 @@ export default function FruitName() {
   console.log(router);
 
   function takeMeHome() {
-    router.replace("/");
+    router.push("/");
   }
 
   return (
