@@ -1,3 +1,25 @@
+//Styled JSX
+
+function Heading(props) {
+  return (
+    <div>
+      <h1>{props.heading}</h1>
+      <style jsx>
+        {`
+          h1 {
+            color: red;
+          }
+        `}
+      </style>
+    </div>
+  );
+}
+
 export default function Home() {
-  return <h1>Hello World</h1>;
+  return (
+    <div>
+      <Heading heading="Heading" />
+      <h1>Here</h1>
+    </div>
+  );
 }
