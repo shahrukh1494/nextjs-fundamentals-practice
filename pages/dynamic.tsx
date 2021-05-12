@@ -1,10 +1,11 @@
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 
-export const getStaticProps: GetStaticProps = async (context) => {
+//called always on every page request. EVEN ON PRODUCTION
+//not recommended unless absolutely necessary because of no caching benefits
+export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
-      revalidate: 10,
-      myFavNum: 4,
+      myFavNum: Math.random(),
     },
   };
 };
